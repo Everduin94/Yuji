@@ -1,0 +1,114 @@
+{
+  "name": "angular-starter-project",
+  "version": "1.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "cypress open",
+    "cy:run": "cypress run",
+    "build:testConfig": "cypress-firebase createTestEnvFile",
+    "cy:test": "npm run build:testConfig && cypress run",
+    "cy:test:open": "npm run build:testConfig && cypress open",
+    "test:watch": "jest --watch --maxWorkers=1",
+    "deploy": "firebase deploy --token $FIREBASE_TOKEN --non-interactive --only hosting"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~9.0.3",
+    "@angular/cdk": "^9.2.4",
+    "@angular/common": "~9.0.3",
+    "@angular/compiler": "~9.0.3",
+    "@angular/core": "~9.0.3",
+    "@angular/forms": "~9.0.3",
+    "@angular/material": "^9.2.4",
+    "@angular/platform-browser": "~9.0.3",
+    "@angular/platform-browser-dynamic": "~9.0.3",
+    "@angular/router": "~9.0.3",
+    "@briebug/cypress-schematic": "^4.1.0",
+    "@briebug/jest-schematic": "^3.0.0",
+    "@datorama/akita": "^5.2.4",
+    "@datorama/akita-ng-entity-service": "^6.0.0",
+    "@fortawesome/angular-fontawesome": "^0.6.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-regular-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@ngneat/copy-to-clipboard": "^1.0.0",
+    "@ngneat/helipopper": "^3.1.0",
+    "@ngneat/hot-toast": "^1.0.10",
+    "@ngneat/hotkeys": "^1.1.2",
+    "@ngneat/overview": "^1.0.0",
+    "angular-in-memory-web-api": "^0.11.0",
+    "copy-to-clipboard": "^3.3.1",
+    "firebase": "^7.22.1",
+    "rxjs": "~6.5.4",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.10.2"
+  },
+  "devDependencies": {
+    "@angular-builders/jest": "10.0.1",
+    "@angular-devkit/build-angular": "~0.900.4",
+    "@angular/cli": "~9.0.4",
+    "@angular/compiler-cli": "~9.0.3",
+    "@angular/language-service": "~9.0.3",
+    "@cypress/webpack-preprocessor": "5.4.6",
+    "@datorama/akita-ngdevtools": "^5.0.1",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/jest": "26.0.14",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^5.1.2",
+    "cypress": "^5.3.0",
+    "cypress-firebase": "^1.4.5",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "jest": "26.5.0",
+    "prettier": "2.2.1",
+    "protractor": "~5.4.3",
+    "ts-loader": "8.0.4",
+    "ts-node": "~8.3.0",
+    "tslint": "~5.18.0",
+    "typescript": "~3.7.5"
+  },
+  "akitaCli": {
+    "customFolderName": "true",
+    "template": "angular",
+    "basePath": "./src/app/state"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "roots": [
+      "src"
+    ],
+    "transform": {
+      "^.+\\.(ts|js|html)$": "ts-jest"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/setup-jest.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "@app/(.*)": "<rootDir>/src/app/$1",
+      "@assets/(.*)": "<rootDir>/src/assets/$1",
+      "@core/(.*)": "<rootDir>/src/app/core/$1",
+      "@env": "<rootDir>/src/environments/environment",
+      "@src/(.*)": "<rootDir>/src/src/$1"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "<rootDir>/tsconfig.spec.json",
+        "stringifyContentPathRegex": "\\.html$",
+        "astTransformers": [
+          "jest-preset-angular/build/InlineFilesTransformer",
+          "jest-preset-angular/build/StripStylesTransformer"
+        ]
+      },
+      "isolatedModules": true
+    }
+  }
+}

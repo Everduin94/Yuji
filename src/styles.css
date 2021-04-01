@@ -1,0 +1,67 @@
+/* Tippy Stuff */
+@import '~tippy.js/dist/tippy.css';
+@import '~tippy.js/themes/light.css';
+@import '~tippy.js/animations/scale.css';
+
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #2979ff;
+  --secondary-color: #1de9b6;
+  --dark-secondary-color: #00b686;
+  --warn-color: #ff1744;
+  --background-color: #212834;
+  --dark-background-color: #1e2530;
+  --box-color: #11111170;
+  --text-color: #ffffff;
+  --border-color:#ffffff;
+  --box-shadow: #111111;
+  --cancel-color: #37474f;
+  --dark-primary: rgb(41, 121, 255, 0.55);
+  --light-primary: #75a7ff;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  /*height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);*/
+}
+
+html {
+  /*height: 100%;*/
+}
+
+body > *, div {
+  box-sizing: border-box;
+}
+
+/* Chromium */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  height: 5px;
+  background: var(--box-color);
+}
+
+::-webkit-scrollbar-thumb {
+  height: 5px;
+  background: whitesmoke;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--box-color) var(--background-color);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
