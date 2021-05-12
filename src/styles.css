@@ -5,19 +5,9 @@
 
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --primary-color: #2979ff;
-  --secondary-color: #1de9b6;
-  --dark-secondary-color: #00b686;
-  --warn-color: #ff1744;
-  --background-color: #212834;
-  --dark-background-color: #1e2530;
-  --box-color: #11111170;
-  --text-color: #ffffff;
-  --border-color:#ffffff;
-  --box-shadow: #111111;
-  --cancel-color: #37474f;
-  --dark-primary: rgb(41, 121, 255, 0.55);
-  --light-primary: #75a7ff;
+  --primary-color: #40c4ff;
+  --accent-color: #ff4081;
+  --warn-color: #f44336;
 }
 
 body {
@@ -39,6 +29,32 @@ html {
 
 body > *, div {
   box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+}
+
+.basic-padding {
+  padding: 8px;
+}
+
+.basic-margin, .row-input {
+  margin: 8px;
+}
+
+.row-input {
+  display: block;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Chromium */

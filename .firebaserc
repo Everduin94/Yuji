@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "yuji-backend": {
+      "hosting": {
+        "angular-starter-project": [
+          "yuji-backend"
+        ]
+      }
+    }
+  }
+}
